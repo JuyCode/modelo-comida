@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Casa del Sabor | Restaurant & Cocina Artesanal</title>
+    <meta name="description" content="Las mejores hamburguesas, milanesas y platos artesanales. Sabor casero con ingredientes frescos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <span class="loader-icon"><i class="fas fa-utensils"></i></span>
+            <p class="loader-text">La Casa del Sabor</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header id="navbar">
+        <nav class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-icon"><i class="fas fa-fire-burner"></i></span>
+                <span class="logo-text">La Casa del <span class="highlight">Sabor</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Inicio</a></li>
+                <li><a href="#about" class="nav-link">Nosotros</a></li>
+                <li><a href="#menu" class="nav-link">Menú</a></li>
+                <li><a href="#specials" class="nav-link">Especiales</a></li>
+                <li><a href="#testimonials" class="nav-link">Opiniones</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">
+                <i class="fas fa-shopping-bag"></i> Pedir Ahora
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg">
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1920&q=80')"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1551024506-0bccd828d307?w=1920&q=80')"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=1920&q=80')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-badge" data-aos="fade-down">
+                <i class="fas fa-star"></i> Cocina Artesanal desde 2015
+            </span>
+            <h1 class="hero-title" data-aos="fade-up">
+                Sabor que<br>
+                <span class="hero-title-accent">Enamora</span>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-delay="200">
+                Ingredientes frescos, recetas de la abuela y pasion en cada plato. 
+                Descubi el verdadero gusto de comer bien.
+            </p>
+            <div class="hero-buttons" data-aos="fade-up" data-delay="400">
+                <a href="#menu" class="btn btn-primary">
+                    <i class="fas fa-utensils"></i> Ver Menu
+                </a>
+                <a href="https://wa.me/5493884418917?text=Hola!%20Quisiera%20hacer%20un%20pedido" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                </a>
+            </div>
+            <div class="hero-stats" data-aos="fade-up" data-delay="600">
+                <div class="hero-stat">
+                    <span class="hero-stat-number" data-count="1500">0</span><span class="hero-stat-plus">+</span>
+                    <span class="hero-stat-label">Clientes Felices</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number" data-count="50">0</span><span class="hero-stat-plus">+</span>
+                    <span class="hero-stat-label">Platos en el Menu</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number" data-count="9">0</span>
+                    <span class="hero-stat-label">Anos de Experiencia</span>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="hero-scroll">
+            <span class="mouse">
+                <span class="wheel"></span>
+            </span>
+            <span class="hero-scroll-text">Scroll</span>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images" data-aos="fade-right">
+                    <div class="about-img-main">
+                        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&q=80" alt="Nuestro chef preparando comida" loading="lazy">
+                    </div>
+                    <div class="about-img-secondary">
+                        <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=400&q=80" alt="Ingredientes frescos" loading="lazy">
+                    </div>
+                    <div class="about-experience-badge">
+                        <span class="exp-number">9</span>
+                        <span class="exp-text">Anos de<br>Experiencia</span>
+                    </div>
+                </div>
+                <div class="about-content" data-aos="fade-left">
+                    <span class="section-tag"><i class="fas fa-leaf"></i> Sobre Nosotros</span>
+                    <h2 class="section-title">Tradicion, Frescura y <span class="highlight">Pasion</span></h2>
+                    <p class="about-text">
+                        En <strong>La Casa del Sabor</strong> creemos que la buena comida no tiene secretos: 
+                        ingredientes de primera, recetas que pasan de generacion en generacion, y mucho amor 
+                        en cada plato que sale de nuestra cocina.
+                    </p>
+                    <p class="about-text">
+                        Desde 2015, nos dedicamos a brindar una experiencia gastronomica unica, 
+                        combinando los sabores caseros que te recuerdan a la comida de la abuela con 
+                        un toque moderno que sorprende a cada cliente.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-carrot"></i>
+                            </div>
+                            <div>
+                                <h4>Ingredientes Frescos</h4>
+                                <p>Seleccionamos diariamente los mejores ingredientes del mercado.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-fire-flame-curved"></i>
+                            </div>
+                            <div>
+                                <h4>Recetas Artesanales</h4>
+                                <p>Preparaciones caseras con el sabor de siempre.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-truck-fast"></i>
+                            </div>
+                            <div>
+                                <h4>Envio a Domicilio</h4>
+                                <p>Retiro en local o delivery rapido a tu door.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee / Brand Strip -->
+    <section class="brand-strip">
+        <div class="marquee">
+            <div class="marquee-content">
+                <span><i class="fas fa-burger"></i> Hamburguesas</span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-drumstick-bite"></i> Milanesas</span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-cookie"></i> Merienda</span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-pizza-slice"></i> Pizzas</span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-mug-hot"></i> Bebidas</span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-ice-cream"></i> Postres</span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-pepper-hot"></i> Empanadas</span>
+                <span><i class="fas fa-star"></i></span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span><i class="fas fa-burger"></i> Hamburguesas</span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-drumstick-bite"></i> Milanesas</span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-cookie"></i> Merienda</span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-pizza-slice"></i> Pizzas</span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-mug-hot"></i> Bebidas</span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-ice-cream"></i> Postres</span>
+                <span><i class="fas fa-star"></i></span>
+                <span><i class="fas fa-pepper-hot"></i> Empanadas</span>
+                <span><i class="fas fa-star"></i></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section menu">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-utensils"></i> Nuestro Menu</span>
+                <h2 class="section-title">Descubri Nuestros <span class="highlight">Platos</span></h2>
+                <p class="section-desc">Cada plato esta preparado con ingredientes frescos y mucho amor. Elegi tu favorito.</p>
+            </div>
+
+            <!-- Menu Filters -->
+            <div class="menu-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-grid-2"></i> Todos
+                </button>
+                <button class="filter-btn" data-filter="hamburguesas">
+                    <i class="fas fa-burger"></i> Hamburguesas
+                </button>
+                <button class="filter-btn" data-filter="milanesas">
+                    <i class="fas fa-drumstick-bite"></i> Milanesas
+                </button>
+                <button class="filter-btn" data-filter="merienda">
+                    <i class="fas fa-cookie"></i> Merienda
+                </button>
+                <button class="filter-btn" data-filter="pizzas">
+                    <i class="fas fa-pizza-slice"></i> Pizzas
+                </button>
+                <button class="filter-btn" data-filter="bebidas">
+                    <i class="fas fa-glass-water"></i> Bebidas
+                </button>
+                <button class="filter-btn" data-filter="empanadas">
+                    <i class="fas fa-pepper-hot"></i> Empanadas
+                </button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menuGrid">
+
+                <!-- Hamburguesas -->
+                <div class="menu-card" data-category="hamburguesas" data-aos="fade-up">
+                    <div class="menu-card-img">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80" alt="Hamburguesa Clasica" loading="lazy">
+                        <span class="menu-card-badge">Popular</span>
+                        <div class="menu-card-overlay">
+                            <button class="menu-card-quick"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Hamburguesa Clasica</h3>
+                            <span class="menu-card-price">$4.500</span>
+                        </div>
+                        <p class="menu-card-desc">Medallon de carne 180g, lechuga, tomate, cebolla morada, queso cheddar y salsa especial.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-meta">
+                                <span><i class="fas fa-fire"></i> 650 cal</span>
+                                <span><i class="fas fa-clock"></i> 15 min</span>
+                            </div>
+                            <button class="menu-card-btn" data-name="Hamburguesa Clasica" data-price="4500">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="hamburguesas" data-aos="fade-up">
+                    <div class="menu-card-img">
+                        <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=500&q=80" alt="Hamburguesa Doble Cheddar" loading="lazy">
+                        <span class="menu-card-badge hot">Picante</span>
+                        <div class="menu-card-overlay">
+                            <button class="menu-card-quick"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Doble Cheddar</h3>
+                            <span class="menu-card-price">$5.800</span>
+                        </div>
+                        <p class="menu-card-desc">Dos medallones de 150g cada uno, doble queso cheddar, bacon crocante y BBQ ahumada.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-meta">
+                                <span><i class="fas fa-fire"></i> 980 cal</span>
+                                <span><i class="fas fa-clock"></i> 20 min</span>
+                            </div>
+                            <button class="menu-card-btn" data-name="Doble Cheddar" data-price="5800">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="hamburguesas" data-aos="fade-up">
+                    <div class="menu-card-img">
+                        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=500&q=80" alt="Hamburguesa Vegana" loading="lazy">
+                        <span class="menu-card-badge veg">Vegana</span>
+                        <div class="menu-card-overlay">
+                            <button class="menu-card-quick"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Burger Vegana</h3>
+                            <span class="menu-card-price">$5.200</span>
+                        </div>
+                        <p class="menu-card-desc">Medallon de plant-based, palta, rucula, tomate cherry y mayonesa de chipotle.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-meta">
+                                <span><i class="fas fa-fire"></i> 420 cal</span>
+                                <span><i class="fas fa-clock"></i> 15 min</span>
+                            </div>
+                            <button class="menu-card-btn" data-name="Burger Vegana" data-price="5200">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milanesas -->
+                <div class="menu-card" data-category="milanesas" data-aos="fade-up">
+                    <div class="menu-card-img">
+                        <img src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?w=500&q=80" alt="Milanesa Napolitana" loading="lazy">
+                        <span class="menu-card-badge">Top Ventas</span>
+                        <div class="menu-card-overlay">
+                            <button class="menu-card-quick"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Milanesa Napolitana</h3>
+                            <span class="menu-card-price">$5.500</span>
+                        </div>
+                        <p class="menu-card-desc">Milanesa de carne empanizada, salsa casera, mozzarella derretida y oregano.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-meta">
+                                <span><i class="fas fa-fire"></i> 780 cal</span>
+                                <span><i class="fas fa-clock"></i> 25 min</span>
+                            </div>
+                            <button class="menu-card-btn" data-name="Milanesa Napolitana" data-price="5500">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="milanesas" data-aos="fade-up">
+                    <div class="menu-card-img">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500&q=80" alt="Milanesa a la Romana" loading="lazy">
+                        <div class="menu-card-overlay">
+                            <button class="menu-card-quick"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Milanesa a la Romana</h3>
+                            <span class="menu-card-price">$5.200</span>
+                        </div>
+                        <p class="menu-card-desc">Milanesa de pollo crocante con huevo frito, pure de papas y ensalada rusa.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-meta">
+                                <span><i class="fas fa-fire"></i> 720 cal</span>
+                                <span><i class="fas fa-clock"></i> 20 min</span>
+                            </div>
+                            <button class="menu-card-btn" data-name="Milanesa a la Romana" data-price="5200">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="milanesas" data-aos="fade-up">
+                    <div class="menu-card-img">
+                        <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=500&q=80" alt="Milanesa de Pollo" loading="lazy">
+                        <div class="menu-card-overlay">
+                            <button class="menu-card-quick"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Milanesa de Pollo</h3>
+                            <span class="menu-card-price">$4.800</span>
+                        </div>
+                        <p class="menu-card-desc">Milanesa de pechuga de pollo empanizada, con ensalada verde y limon.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-meta">
+                                <span><i class="fas fa-fire"></i> 520 cal</span>
+                                <span><i class="fas fa-clock"></i> 18 min</span>
+                            </div>
+                            <button class="menu-card-btn" data-name="Milanesa de Pollo" data-price="4800">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Merienda -->
+                <div class="menu-card" data-category="merienda" data-aos="fade-up">
+                    <div class="menu-card-img">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&q=80" alt="Torta Chocolatelada" loading="lazy">
+                        <span class="menu-card-badge sweet">Dulce</span>
+                        <div class="menu-card-overlay">
+                            <button class="menu-card-quick"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Torta Chocolatada</h3>
+                            <span class="menu-card-price">$3.200</span>
+                        </div>
+                        <p class="menu-card-desc">Torta casera de chocolate con ganache, frutas frescas y crema chantilly.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-meta">
+                                <span><i class="fas fa-fire"></i> 380 cal</span>
+                                <span><i class="fas fa-clock"></i> 5 min</span>
+                            </div>
+                            <button class="menu-card-btn" data-name="Torta Chocolatada" data-price="3200">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="merienda" data-aos="fade-up">
+                    <div class="menu-card-img">
+                        <img src="https://images.unsplash.com/photo-1558024920-b41e1887dc32?w=500&q=80" alt="Medialunas" loading="lazy">
+                        <div class="menu-card-overlay">
+                            <button class="menu-card-quick"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Medialunas (x6)</h3>
+                            <span class="menu-card-price">$2.800</span>
+                        </div>
+                        <p class="menu-card-desc">Medialunas caseras recien horneadas, mantecosas y caramelizadas.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-meta">
+                                <span><i class="fas fa-fire"></i> 240 cal</span>
+                                <span><i class="fas fa-clock"></i> 3 min</span>
+                            </div>
+                            <button class="menu-card-btn" data-name="Medialunas (x6)" data-price="2800">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="merienda" data-aos="fade-up">
+                    <div class="menu-card-img">
+                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500&q=80" alt="Churros con Chocolate" loading="lazy">
+                        <div class="menu-card-overlay">
+                            <button class="menu-card-quick"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Churros con Chocolate</h3>
+                            <span class="menu-card-price">$2.500</span>
+                        </div>
+                        <p class="menu-card-desc">6 churros recien fritos con chocolate caliente espeso para dippear.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-meta">
+                                <span><i class="fas fa-fire"></i> 450 cal</span>
+                                <span><i class="fas fa-clock"></i> 10 min</span>
+                            </div>
+                            <button class="menu-card-btn" data-name="Churros con Chocolate" data-price="2500">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizzas -->
+                <div class="menu-card" data-category="pizzas" data-aos="fade-up">
+                    <div class="menu-card-img">
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&q=80" alt="Pizza Muzzarella" loading="lazy">
+                        <span class="menu-card-badge">Clasica</span>
+                        <div class="menu-card-overlay">
+                            <button class="menu-card-quick"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Pizza Muzzarella</h3>
+                            <span class="menu-card-price">$4.000</span>
+                        </div>
+                        <p class="menu-card-desc">Masa artesanal, salsa de tomate casera, mozzarella fresca y oregano.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-meta">
+                                <span><i class="fas fa-fire"></i> 680 cal</span>
+                                <span><i class="fas fa-clock"></i> 18 min</span>
+                            </div>
+                            <button class="menu-card-btn" data-name="Pizza Muzzarella" data-price="4000">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="pizzas" data-aos="fade-up">
+                    <div class="menu-card-img">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&q=80" alt="Pizza Fugazzeta" loading="lazy">
+                        <div class="menu-card-overlay">
+                            <button class="menu-card-quick"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Fugazzeta Rellena</h3>
+                            <span class="menu-card-price">$5.500</span>
+                        </div>
+                        <p class="menu-card-desc">Doble capa de mozzarella, cebolla caramelizada y queso parmesano.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-meta">
+                                <span><i class="fas fa-fire"></i> 820 cal</span>
+                                <span><i class="fas fa-clock"></i> 22 min</span>
+                            </div>
+                            <button class="menu-card-btn" data-name="Fugazzeta Rellena" data-price="5500">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Empanadas -->
+                <div class="menu-card" data-category="empanadas" data-aos="fade-up">
+                    <div class="menu-card-img">
+                        <img src="https://images.unsplash.com/photo-1604467707321-70d009801bf4?w=500&q=80" alt="Empanadas" loading="lazy">
+                        <span class="menu-card-badge">x12</span>
+                        <div class="menu-card-overlay">
+                            <button class="menu-card-quick"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Empanadas (x12)</h3>
+                            <span class="menu-card-price">$5.400</span>
+                        </div>
+                        <p class="menu-card-desc">Docena de empanadas caseras: carne, pollo, humita o jamon y queso.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-meta">
+                                <span><i class="fas fa-fire"></i> 180 cal/u</span>
+                                <span><i class="fas fa-clock"></i> 15 min</span>
+                            </div>
+                            <button class="menu-card-btn" data-name="Empanadas (x12)" data-price="5400">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="empanadas" data-aos="fade-up">
+                    <div class="menu-card-img">
+                        <img src="https://images.unsplash.com/photo-1626198226928-4a4b78e9d560?w=500&q=80" alt="Empanadas al Disco" loading="lazy">
+                        <div class="menu-card-overlay">
+                            <button class="menu-card-quick"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Empanadas (x6)</h3>
+                            <span class="menu-card-price">$3.000</span>
+                        </div>
+                        <p class="menu-card-desc">Media docena de empanadas fritas al disco con cebolla y morron.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-meta">
+                                <span><i class="fas fa-fire"></i> 200 cal/u</span>
+                                <span><i class="fas fa-clock"></i> 12 min</span>
+                            </div>
+                            <button class="menu-card-btn" data-name="Empanadas (x6)" data-price="3000">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bebidas -->
+                <div class="menu-card" data-category="bebidas" data-aos="fade-up">
+                    <div class="menu-card-img">
+                        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=500&q=80" alt="Limonada Casera" loading="lazy">
+                        <span class="menu-card-badge veg">Natural</span>
+                        <div class="menu-card-overlay">
+                            <button class="menu-card-quick"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Limonada Natural</h3>
+                            <span class="menu-card-price">$1.800</span>
+                        </div>
+                        <p class="menu-card-desc">Limonada recien preparada con limones frescos, hierbabuena y hielo.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-meta">
+                                <span><i class="fas fa-fire"></i> 80 cal</span>
+                                <span><i class="fas fa-clock"></i> 3 min</span>
+                            </div>
+                            <button class="menu-card-btn" data-name="Limonada Natural" data-price="1800">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="bebidas" data-aos="fade-up">
+                    <div class="menu-card-img">
+                        <img src="https://images.unsplash.com/photo-1497534446932-c925b458314e?w=500&q=80" alt="Milkshake" loading="lazy">
+                        <div class="menu-card-overlay">
+                            <button class="menu-card-quick"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-card-title">Milkshake Premium</h3>
+                            <span class="menu-card-price">$2.800</span>
+                        </div>
+                        <p class="menu-card-desc">Batido de leche con Nutella, Oreo, frutilla o banana. Crema y toppings.</p>
+                        <div class="menu-card-footer">
+                            <div class="menu-card-meta">
+                                <span><i class="fas fa-fire"></i> 420 cal</span>
+                                <span><i class="fas fa-clock"></i> 5 min</span>
+                            </div>
+                            <button class="menu-card-btn" data-name="Milkshake Premium" data-price="2800">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Specials Section -->
+    <section id="specials" class="section specials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-fire"></i> Ofertas Especiales</span>
+                <h2 class="section-title">Promociones de la <span class="highlight">Semana</span></h2>
+                <p class="section-desc">Aprovecha nuestras ofertas por tiempo limitado. No te las pierdas!</p>
+            </div>
+            <div class="specials-grid">
+                <div class="special-card" data-aos="fade-up">
+                    <div class="special-card-bg" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80')"></div>
+                    <div class="special-card-content">
+                        <span class="special-discount">-30%</span>
+                        <h3 class="special-title">Combo Burger + Papas</h3>
+                        <p class="special-desc">Hamburguesa clasica con papas fritas y bebida incluida.</p>
+                        <div class="special-prices">
+                            <span class="special-old-price">$8.500</span>
+                            <span class="special-new-price">$5.950</span>
+                        </div>
+                        <a href="https://wa.me/5493884418917?text=Hola!%20Quiero%20el%20Combo%20Burger%20%2B%20Papas" class="btn btn-primary btn-sm" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Pedir Ahora
+                        </a>
+                    </div>
+                </div>
+                <div class="special-card" data-aos="fade-up" data-delay="200">
+                    <div class="special-card-bg" style="background-image: url('https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?w=600&q=80')"></div>
+                    <div class="special-card-content">
+                        <span class="special-discount">Martes</span>
+                        <h3 class="special-title">2x1 en Milanesas</h3>
+                        <p class="special-desc">Todos los martes, la segunda milanesa al 50% de descuento.</p>
+                        <div class="special-prices">
+                            <span class="special-old-price">$11.000</span>
+                            <span class="special-new-price">$8.250</span>
+                        </div>
+                        <a href="https://wa.me/5493884418917?text=Hola!%20Quiero%20el%202x1%20de%20Milanesas" class="btn btn-primary btn-sm" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Pedir Ahora
+                        </a>
+                    </div>
+                </div>
+                <div class="special-card" data-aos="fade-up" data-delay="400">
+                    <div class="special-card-bg" style="background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80')"></div>
+                    <div class="special-card-content">
+                        <span class="special-discount">Happy Hour</span>
+                        <h3 class="special-title">Merienda Completa</h3>
+                        <p class="special-desc">2 medialunas, cafe, zumo y tostadas por un precio especial.</p>
+                        <div class="special-prices">
+                            <span class="special-old-price">$4.500</span>
+                            <span class="special-new-price">$2.990</span>
+                        </div>
+                        <a href="https://wa.me/5493884418917?text=Hola!%20Quiero%20la%20Merienda%20Completa" class="btn btn-primary btn-sm" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Pedir Ahora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-comments"></i> Opiniones</span>
+                <h2 class="section-title">Lo Que Dicen Nuestros <span class="highlight">Clientes</span></h2>
+                <p class="section-desc">La satisfaccion de nuestros clientes es nuestra mejor carta de presentacion.</p>
+            </div>
+            <div class="testimonials-grid" data-aos="fade-up">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Las mejores hamburguesas que comi en mi vida! La doble cheddar es espectacular. El delivery siempre llega rapidisimo y caliente. 100% recomendado."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background-color: #FF6B35;">M</div>
+                        <div>
+                            <h4>Martin G.</h4>
+                            <span>Cliente frecuente</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card featured">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"La milanesa napolitana es simplemente DIVINA. La masa es super crocante y la salsa casera no tiene comparacion. Vuelvo todos los viernes con mi familia."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background-color: #2D6A4F;">L</div>
+                        <div>
+                            <h4>Laura M.</h4>
+                            <span>Cliente desde 2020</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
+                    </div>
+                    <p class="testimonial-text">"El combo de merienda es perfecto para la tarde. Las medialunas son igualitas a las de mi abuela. Excelente relacion calidad-precio."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background-color: #5A189A;">C</div>
+                        <div>
+                            <h4>Carolina R.</h4>
+                            <span>Cliente regular</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram / Gallery CTA -->
+    <section class="section instagram-cta">
+        <div class="container">
+            <div class="instagram-content" data-aos="fade-up">
+                <i class="fab fa-instagram instagram-icon"></i>
+                <h2 class="instagram-title">Seguinos en Instagram</h2>
+                <p class="instagram-text">Descubi fotos, recetas, behind the scenes y promociones exclusivas para nuestros seguidores.</p>
+                <a href="https://instagram.com/lacasdelsabor" class="btn btn-instagram" target="_blank">
+                    <i class="fab fa-instagram"></i> @lacasdelsabor
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-map-marker-alt"></i> Contacto</span>
+                <h2 class="section-title">Encontranos o <span class="highlight">Pedinos</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-location-dot"></i></div>
+                        <div>
+                            <h4>Direccion</h4>
+                            <p>Av. Principal 1234, CABA, Buenos Aires</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>Telefono</h4>
+                            <p>+54 11 0000-0000</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h4>Horarios</h4>
+                            <p>Lun - Dom: 11:00 - 23:00</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>Pedinos por WhatsApp al toque</p>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <h3 class="contact-form-title">Envianos tu consulta</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="formName" placeholder=" " required>
+                            <label for="formName">Tu nombre</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="formEmail" placeholder=" " required>
+                            <label for="formEmail">Tu email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="formPhone" placeholder=" " required>
+                            <label for="formPhone">Telefono</label>
+                        </div>
+                        <div class="form-group full-width">
+                            <textarea id="formMessage" rows="4" placeholder=" " required></textarea>
+                            <label for="formMessage">Tu mensaje</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section class="map-section">
+        <div class="map-placeholder">
+            <i class="fas fa-map-location-dot"></i>
+            <p>Av. Principal 1234, CABA, Buenos Aires</p>
+            <a href="https://maps.google.com" target="_blank" class="btn btn-primary btn-sm">
+                <i class="fas fa-directions"></i> Cómo Llegar
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,80 1440,60 L1440,120 L0,120 Z" fill="currentColor"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <a href="#hero" class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-fire-burner"></i></span>
+                        <span class="logo-text">La Casa del <span class="highlight">Sabor</span></span>
+                    </a>
+                    <p>Desde 2015 bringing the best homemade food to your table. Ingredientes frescos, recetas de la abuela y mucho amor.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Menu</h4>
+                    <ul class="footer-links">
+                        <li><a href="#menu">Hamburguesas</a></li>
+                        <li><a href="#menu">Milanesas</a></li>
+                        <li><a href="#menu">Merienda</a></li>
+                        <li><a href="#menu">Pizzas</a></li>
+                        <li><a href="#menu">Empanadas</a></li>
+                        <li><a href="#menu">Bebidas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">Nosotros</a></li>
+                        <li><a href="#specials">Especiales</a></li>
+                        <li><a href="#testimonials">Opiniones</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                        <li><a href="#">Terminos y Condiciones</a></li>
+                        <li><a href="#">Politica de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Horarios</h4>
+                    <ul class="footer-schedule">
+                        <li><span>Lunes a Viernes</span><span>11:00 - 23:00</span></li>
+                        <li><span>Sabados</span><span>11:00 - 00:00</span></li>
+                        <li><span>Domingos</span><span>12:00 - 22:00</span></li>
+                        <li><span>Feriados</span><span>12:00 - 22:00</span></li>
+                    </ul>
+                    <div class="footer-delivery">
+                        <i class="fas fa-motorcycle"></i>
+                        <span>Delivery gratis en pedidos +$8.000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 La Casa del Sabor. Todos los derechos reservados.</p>
+                <p>Hecho con <i class="fas fa-heart" style="color: var(--primary);"></i> para los amantes de la buena comida</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5493884418917?text=Hola!%20Quisiera%20hacer%20un%20pedido" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Pedinos por WhatsApp</span>
+    </a>
+
+    <!-- Back to Top -->
+    <a href="#hero" class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-bag"></i> Tu Pedido</h3>
+            <button class="cart-close" id="cartClose"><i class="fas fa-xmark"></i></button>
+        </div>
+        <div class="cart-body" id="cartBody">
+            <div class="cart-empty">
+                <i class="fas fa-basket-shopping"></i>
+                <p>Tu carrito esta vacio</p>
+                <span>Agrega platos del menu para empezar</span>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none;">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">$0</span>
+            </div>
+            <a href="#" class="btn btn-whatsapp btn-full" id="cartWhatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> Enviar Pedido por WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Cart Toggle Button -->
+    <button class="cart-toggle" id="cartToggle" aria-label="Abrir carrito">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count" id="cartCount">0</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
