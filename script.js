@@ -4,42 +4,27 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // === Preloader ===
-    const preloader = document.getElementById('preloader');
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            preloader.classList.add('hidden');
-        }, 800);
-    });
-    // Fallback: hide preloader after 3s max
-    setTimeout(() => {
-        preloader.classList.add('hidden');
-    }, 3000);
-
     // === Navbar Scroll ===
     const navbar = document.getElementById('navbar');
     const backToTop = document.getElementById('backToTop');
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('#navLinks a');
 
     function handleScroll() {
         const scrollY = window.scrollY;
 
-        // Navbar background
         if (scrollY > 80) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
 
-        // Back to top
         if (scrollY > 500) {
             backToTop.classList.add('visible');
         } else {
             backToTop.classList.remove('visible');
         }
 
-        // Active nav link based on scroll
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop - 120;
@@ -75,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navToggle.addEventListener('click', toggleMobileMenu);
     mobileOverlay.addEventListener('click', toggleMobileMenu);
 
-    navLinksEl.querySelectorAll('.nav-link').forEach(link => {
+    navLinksEl.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             if (navLinksEl.classList.contains('active')) {
                 toggleMobileMenu();
@@ -112,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (filter === 'all' || card.getAttribute('data-category') === filter) {
                     card.classList.remove('hidden');
                     card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
+                    card.style.transform = 'translateY(16px)';
                     setTimeout(() => {
                         card.style.opacity = '1';
                         card.style.transform = 'translateY(0)';
@@ -152,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
     cartClose.addEventListener('click', closeCart);
     cartOverlay.addEventListener('click', closeCart);
 
-    // Add to cart buttons
     document.querySelectorAll('.menu-card-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             const name = btn.getAttribute('data-name');
@@ -168,15 +152,14 @@ document.addEventListener('DOMContentLoaded', () => {
             updateCartUI();
             openCart();
 
-            // Button feedback
-            btn.style.transform = 'scale(1.3)';
-            btn.style.background = 'var(--primary)';
+            btn.style.transform = 'scale(1.2)';
+            btn.style.background = 'var(--black)';
             btn.style.color = 'var(--white)';
             setTimeout(() => {
                 btn.style.transform = '';
                 btn.style.background = '';
                 btn.style.color = '';
-            }, 300);
+            }, 250);
         });
     });
 
@@ -189,7 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (cart.length === 0) {
             cartBody.innerHTML = `
                 <div class="cart-empty">
-                    <i class="fas fa-basket-shopping"></i>
                     <p>Tu carrito esta vacio</p>
                     <span>Agrega platos del menu para empezar</span>
                 </div>
@@ -216,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
             cartFooter.style.display = 'block';
             cartTotal.textContent = '$' + totalPrice.toLocaleString();
 
-            // Build WhatsApp message
             let message = 'Hola! Quiero hacer el siguiente pedido:\n\n';
             cart.forEach(item => {
                 message += `- ${item.name} x${item.qty} ($${(item.price * item.qty).toLocaleString()})\n`;
@@ -237,7 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Expose functions globally
     window.changeQty = function(index, delta) {
         cart[index].qty += delta;
         if (cart[index].qty <= 0) {
@@ -251,25 +231,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCartUI();
     };
 
-    // === AOS-like Scroll Animations ===
-    const animatedElements = document.querySelectorAll('[data-aos]');
-
-    function handleAOS() {
-        animatedElements.forEach(el => {
-            const rect = el.getBoundingClientRect();
-            const delay = parseInt(el.getAttribute('data-delay') || 0);
-
-            if (rect.top < window.innerHeight - 80) {
-                setTimeout(() => {
-                    el.classList.add('aos-animate');
-                }, delay);
-            }
-        });
-    }
-
-    window.addEventListener('scroll', handleAOS);
-    handleAOS();
-
     // === Contact Form ===
     const contactForm = document.getElementById('contactForm');
     contactForm.addEventListener('submit', (e) => {
@@ -281,28 +242,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const message = document.getElementById('formMessage').value;
 
         const whatsappMsg = encodeURIComponent(
-            `Hola! Soy ${name}.\n\n` +
-            `Telefono: ${phone}\n` +
-            `Email: ${email}\n\n` +
-            `Mensaje: ${message}`
+            `Hola! Soy ${name}.\n\nTelefono: ${phone}\nEmail: ${email}\n\nMensaje: ${message}`
         );
 
         window.open(`https://wa.me/5493884418917?text=${whatsappMsg}`, '_blank');
 
         contactForm.reset();
 
-        // Success feedback
         const btn = contactForm.querySelector('button[type="submit"]');
-        const originalHTML = btn.innerHTML;
-        btn.innerHTML = '<i class="fas fa-check"></i> Mensaje Enviado!';
-        btn.style.background = '#52C41A';
+        const originalText = btn.textContent;
+        btn.textContent = 'Mensaje Enviado!';
+        btn.style.background = '#25D366';
         setTimeout(() => {
-            btn.innerHTML = originalHTML;
+            btn.textContent = originalText;
             btn.style.background = '';
         }, 3000);
     });
 
-    // === Smooth scroll for anchor links ===
+    // === Smooth scroll ===
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
             e.preventDefault();
