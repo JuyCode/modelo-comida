@@ -328,54 +328,53 @@ body {
 /* Footer */
 .footer {
   text-align: center;
-  padding: 32px 16px 24px;
+  padding: 24px 16px;
   border-top: 1px solid #edf2f7;
   margin-top: 20px;
   transition: border-color 0.3s;
 }
 
-.footer-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-bottom: 20px;
-}
-
-.footer-card {
-  background: #f8f9fa;
-  border: 1px solid #edf2f7;
-  border-radius: 12px;
-  padding: 16px 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  transition: background 0.3s, border-color 0.3s;
-}
-
-.footer-card i {
-  width: 20px;
-  height: 20px;
-  color: #c0392b;
-}
-
-.footer-card strong {
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: #555;
-  transition: color 0.3s;
-}
-
-.footer-card span {
-  font-size: 0.78rem;
-  color: #888;
-}
-
 .footer-copy {
   font-size: 0.75rem;
   color: #bbb;
+}
+
+/* Info del Local */
+.local-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 12px 16px;
+  background: #f8f9fa;
+  border: 1px solid #edf2f7;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.local-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+.local-item i {
+  width: 14px;
+  height: 14px;
+  color: #c0392b;
+  flex-shrink: 0;
+}
+
+.local-divider {
+  width: 1px;
+  height: 14px;
+  background: #ddd;
+  flex-shrink: 0;
 }
 
 /* Responsive */
@@ -392,9 +391,13 @@ body {
     font-size: 0.78rem;
   }
 
-  .footer-cards {
-    grid-template-columns: 1fr;
+  .local-info {
+    flex-direction: column;
     gap: 10px;
+  }
+
+  .local-divider {
+    display: none;
   }
 }
 
@@ -464,17 +467,17 @@ body.dark .footer {
   border-color: #2a2a2a;
 }
 
-body.dark .footer-card {
+body.dark .local-info {
   background: #1a1a1a;
   border-color: #2a2a2a;
 }
 
-body.dark .footer-card strong {
+body.dark .local-item {
   color: #999;
 }
 
-body.dark .footer-card span {
-  color: #666;
+body.dark .local-divider {
+  background: #444;
 }
 
 body.dark .empty-state i {
