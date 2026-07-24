@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Init Lucide icons
   lucide.createIcons();
 
   const searchInput = document.getElementById('searchInput');
@@ -8,10 +7,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const catButtons = categories.querySelectorAll('.cat-item');
   const menuSections = document.querySelectorAll('.menu-section');
   const productCards = document.querySelectorAll('.product-card');
+  const emptyState = document.getElementById('emptyState');
+  const darkToggle = document.getElementById('darkToggle');
 
   let activeCategory = 'all';
 
-  // Category filter
+  // === Dark Mode ===
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark');
+  }
+
+  darkToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+  });
+
+  // === Category Filter ===
   catButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       catButtons.forEach(b => b.classList.remove('active'));
@@ -21,16 +33,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Search
+  // === Search ===
   searchInput.addEventListener('input', () => {
     filterProducts();
   });
 
   function filterProducts() {
     const query = searchInput.value.toLowerCase().trim();
+    let totalVisible = 0;
 
     menuSections.forEach(section => {
-      const sectionCat = section.getAttribute('data-section');
       const cards = section.querySelectorAll('.product-card');
       let sectionVisible = false;
 
@@ -44,15 +56,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const matchesSearch = !query || cardName.includes(query) || cardTitle.includes(query) || cardDesc.includes(query);
 
         if (matchesCat && matchesSearch) {
+          card.classList.remove('fade-out');
           card.style.display = '';
           sectionVisible = true;
+          totalVisible++;
         } else {
-          card.style.display = 'none';
+          card.classList.add('fade-out');
+          setTimeout(() => {
+            card.style.display = 'none';
+          }, 250);
         }
       });
 
       section.style.display = sectionVisible ? '' : 'none';
     });
+
+    // Show/hide empty state
+    if (totalVisible === 0) {
+      emptyState.style.display = '';
+      lucide.createIcons();
+    } else {
+      emptyState.style.display = 'none';
+    }
   }
 
 });

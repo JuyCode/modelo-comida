@@ -12,6 +12,9 @@
   <!-- Header Banner / Logo -->
   <header class="header">
     <div class="banner">
+      <button class="dark-toggle" id="darkToggle" aria-label="Modo oscuro">
+        <i data-lucide="moon"></i>
+      </button>
       <div class="logo-container">
         <div class="logo">Casa del<br>Sabor</div>
       </div>
@@ -69,7 +72,10 @@
 
         <article class="product-card" data-cat="hamburguesas" data-name="hamburguesa clasica doble cheddar bbq">
           <div class="product-info">
-            <h4 class="product-title">Hamburguesa Clasica</h4>
+            <div class="product-title-row">
+              <h4 class="product-title">Hamburguesa Clasica</h4>
+              <span class="badge">Popular</span>
+            </div>
             <p class="product-desc">Medallon de carne 180g, lechuga, tomate, cebolla morada, queso cheddar y salsa especial.</p>
             <span class="product-price">$4.500</span>
           </div>
@@ -110,7 +116,10 @@
 
         <article class="product-card" data-cat="milanesas" data-name="milanesa napolitana carne mozzarella">
           <div class="product-info">
-            <h4 class="product-title">Milanesa Napolitana</h4>
+            <div class="product-title-row">
+              <h4 class="product-title">Milanesa Napolitana</h4>
+              <span class="badge">Popular</span>
+            </div>
             <p class="product-desc">Milanesa de carne empanizada, salsa casera, mozzarella derretida y oregano.</p>
             <span class="product-price">$5.500</span>
           </div>
@@ -213,7 +222,10 @@
 
         <article class="product-card" data-cat="merienda" data-name="torta chocolatada chocolate ganache frutas chantilly">
           <div class="product-info">
-            <h4 class="product-title">Torta Chocolatada</h4>
+            <div class="product-title-row">
+              <h4 class="product-title">Torta Chocolatada</h4>
+              <span class="badge rec">Recomendado</span>
+            </div>
             <p class="product-desc">Torta casera de chocolate con ganache, frutas frescas y crema chantilly.</p>
             <span class="product-price">$3.200</span>
           </div>
@@ -277,11 +289,32 @@
       </div>
     </section>
 
+    <!-- Empty State -->
+    <div class="empty-state" id="emptyState" style="display:none;">
+      <i data-lucide="search-x"></i>
+      <p>No encontramos ese producto</p>
+      <span>Intenta con otro nombre o categoria</span>
+    </div>
+
   </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>La Casa del Sabor &copy; 2025</p>
+    <div class="footer-info">
+      <div class="footer-item">
+        <i data-lucide="map-pin"></i>
+        <span>Av. Principal 1234, CABA</span>
+      </div>
+      <div class="footer-item">
+        <i data-lucide="phone"></i>
+        <span>+54 11 0000-0000</span>
+      </div>
+      <div class="footer-item">
+        <i data-lucide="clock"></i>
+        <span>Lun - Dom: 11:00 - 23:00</span>
+      </div>
+    </div>
+    <p class="footer-copy">La Casa del Sabor &copy; 2025</p>
   </footer>
 
   <script src="app.js"></script>
