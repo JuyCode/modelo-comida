@@ -103,17 +103,11 @@ body {
 }
 
 .header-hours {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
+  display: block;
   font-size: 0.75rem;
   color: #aaa;
   margin-top: 6px;
-}
-
-.header-hours i {
-  width: 12px;
-  height: 12px;
+  text-align: center;
 }
 
 /* Buscador */
