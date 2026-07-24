@@ -102,6 +102,20 @@ body {
   transition: color 0.3s;
 }
 
+.header-hours {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-top: 6px;
+}
+
+.header-hours i {
+  width: 12px;
+  height: 12px;
+}
+
 /* Buscador */
 .search-box {
   display: flex;
@@ -339,43 +353,6 @@ body {
   color: #bbb;
 }
 
-/* Info del Local */
-.local-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  padding: 20px 16px 4px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.local-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.local-item i {
-  width: 14px;
-  height: 14px;
-  color: #c0392b;
-  flex-shrink: 0;
-}
-
-.local-item span {
-  font-size: 0.78rem;
-  color: #888;
-}
-
-.local-dot {
-  width: 3px;
-  height: 3px;
-  background: #ccc;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
 /* WhatsApp */
 .whatsapp-btn {
   position: fixed;
@@ -415,10 +392,6 @@ body {
 
   .product-desc {
     font-size: 0.78rem;
-  }
-
-  .local-info {
-    gap: 24px;
   }
 }
 
@@ -486,10 +459,6 @@ body.dark .product-desc {
 
 body.dark .footer {
   border-color: #2a2a2a;
-}
-
-body.dark .local-item span {
-  color: #777;
 }
 
 body.dark .empty-state i {
