@@ -342,39 +342,31 @@ body {
 /* Info del Local */
 .local-info {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 16px;
-  padding: 12px 16px;
-  background: #f8f9fa;
-  border: 1px solid #edf2f7;
-  border-radius: 12px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-  transition: background 0.3s, border-color 0.3s;
+  gap: 40px;
+  padding: 24px 16px 0;
+  max-width: 600px;
+  margin: 0 auto 8px;
 }
 
 .local-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 6px;
-  font-size: 0.78rem;
-  color: #666;
-  white-space: nowrap;
+  gap: 8px;
 }
 
 .local-item i {
-  width: 14px;
-  height: 14px;
+  width: 22px;
+  height: 22px;
   color: #c0392b;
-  flex-shrink: 0;
 }
 
-.local-divider {
-  width: 1px;
-  height: 14px;
-  background: #ddd;
-  flex-shrink: 0;
+.local-item span {
+  font-size: 0.72rem;
+  color: #888;
+  text-align: center;
+  line-height: 1.3;
 }
 
 /* Responsive */
@@ -392,12 +384,7 @@ body {
   }
 
   .local-info {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .local-divider {
-    display: none;
+    gap: 24px;
   }
 }
 
@@ -467,17 +454,8 @@ body.dark .footer {
   border-color: #2a2a2a;
 }
 
-body.dark .local-info {
-  background: #1a1a1a;
-  border-color: #2a2a2a;
-}
-
-body.dark .local-item {
-  color: #999;
-}
-
-body.dark .local-divider {
-  background: #444;
+body.dark .local-item span {
+  color: #777;
 }
 
 body.dark .empty-state i {
