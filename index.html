@@ -1,545 +1,289 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Casa del Sabor | Cocina Artesanal</title>
-    <meta name="description" content="Las mejores hamburguesas, milanesas y platos artesanales. Sabor casero con ingredientes frescos.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Casa del Sabor - Menu Digital</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <header id="navbar">
-        <nav class="nav-container">
-            <a href="#hero" class="nav-logo">La Casa del Sabor</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#hero">Inicio</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#specials">Especiales</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-            <a href="https://wa.me/5493884418917?text=Hola!%20Quisiera%20hacer%20un%20pedido" class="nav-cta" target="_blank">
-                Pedir Ahora
-            </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </nav>
-    </header>
+  <!-- Header Banner / Logo -->
+  <header class="header">
+    <div class="banner">
+      <div class="logo-container">
+        <div class="logo">Casa del<br>Sabor</div>
+      </div>
+    </div>
+    <div class="header-info">
+      <h1>La Casa del Sabor</h1>
+      <p class="header-sub">Cocina Artesanal</p>
+    </div>
+  </header>
 
-    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+  <main class="container">
 
-    <!-- Hero -->
-    <section id="hero" class="hero">
-        <div class="hero-bg">
-            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1920&q=80')"></div>
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1551024506-0bccd828d307?w=1920&q=80')"></div>
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=1920&q=80')"></div>
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Cocina Artesanal</h1>
-            <p>Ingredientes frescos, recetas caseras y mucho amor en cada plato.</p>
-            <div class="hero-buttons">
-                <a href="#menu" class="btn btn-white">Ver Menu</a>
-                <a href="https://wa.me/5493884418917?text=Hola!%20Quisiera%20hacer%20un%20pedido" class="btn btn-outline-white" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=700&q=80" alt="Nuestro chef preparando comida" loading="lazy">
-                </div>
-                <div class="about-content">
-                    <span class="section-label">Nosotros</span>
-                    <h2>Tradicion y frescura en cada plato</h2>
-                    <p>
-                        En La Casa del Sabor creemos que la buena comida no tiene secretos:
-                        ingredientes de primera, recetas que pasan de generacion en generacion,
-                        y mucho amor en cada plato que sale de nuestra cocina.
-                    </p>
-                    <p>
-                        Desde 2015 nos dedicamos a brindar una experiencia gastronomica unica,
-                        combinando los sabores caseros con un toque moderno que sorprende.
-                    </p>
-                    <div class="about-features">
-                        <div class="about-feature">
-                            <i class="fas fa-leaf"></i>
-                            <span>Ingredientes Frescos</span>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-fire"></i>
-                            <span>Recetas Artesanales</span>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-truck"></i>
-                            <span>Envio a Domicilio</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Menu -->
-    <section id="menu" class="section menu">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Nuestro Menu</span>
-                <h2>Elige tu favorito</h2>
-            </div>
-
-            <div class="menu-filters">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="hamburguesas">Hamburguesas</button>
-                <button class="filter-btn" data-filter="milanesas">Milanesas</button>
-                <button class="filter-btn" data-filter="merienda">Merienda</button>
-                <button class="filter-btn" data-filter="pizzas">Pizzas</button>
-                <button class="filter-btn" data-filter="bebidas">Bebidas</button>
-                <button class="filter-btn" data-filter="empanadas">Empanadas</button>
-            </div>
-
-            <div class="menu-grid" id="menuGrid">
-
-                <!-- Hamburguesas -->
-                <div class="menu-card" data-category="hamburguesas">
-                    <div class="menu-card-img">
-                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80" alt="Hamburguesa Clasica" loading="lazy">
-                    </div>
-                    <div class="menu-card-body">
-                        <div class="menu-card-top">
-                            <h3>Hamburguesa Clasica</h3>
-                            <span class="menu-card-price">$4.500</span>
-                        </div>
-                        <p>Medallon de carne 180g, lechuga, tomate, cebolla morada, queso cheddar y salsa especial.</p>
-                        <button class="menu-card-btn" data-name="Hamburguesa Clasica" data-price="4500">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="menu-card" data-category="hamburguesas">
-                    <div class="menu-card-img">
-                        <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=500&q=80" alt="Doble Cheddar" loading="lazy">
-                    </div>
-                    <div class="menu-card-body">
-                        <div class="menu-card-top">
-                            <h3>Doble Cheddar</h3>
-                            <span class="menu-card-price">$5.800</span>
-                        </div>
-                        <p>Dos medallones de 150g cada uno, doble queso cheddar, bacon crocante y BBQ ahumada.</p>
-                        <button class="menu-card-btn" data-name="Doble Cheddar" data-price="5800">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="menu-card" data-category="hamburguesas">
-                    <div class="menu-card-img">
-                        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=500&q=80" alt="Burger Vegana" loading="lazy">
-                    </div>
-                    <div class="menu-card-body">
-                        <div class="menu-card-top">
-                            <h3>Burger Vegana</h3>
-                            <span class="menu-card-price">$5.200</span>
-                        </div>
-                        <p>Medallon de plant-based, palta, rucula, tomate cherry y mayonesa de chipotle.</p>
-                        <button class="menu-card-btn" data-name="Burger Vegana" data-price="5200">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Milanesas -->
-                <div class="menu-card" data-category="milanesas">
-                    <div class="menu-card-img">
-                        <img src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?w=500&q=80" alt="Milanesa Napolitana" loading="lazy">
-                    </div>
-                    <div class="menu-card-body">
-                        <div class="menu-card-top">
-                            <h3>Milanesa Napolitana</h3>
-                            <span class="menu-card-price">$5.500</span>
-                        </div>
-                        <p>Milanesa de carne empanizada, salsa casera, mozzarella derretida y oregano.</p>
-                        <button class="menu-card-btn" data-name="Milanesa Napolitana" data-price="5500">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="menu-card" data-category="milanesas">
-                    <div class="menu-card-img">
-                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500&q=80" alt="Milanesa a la Romana" loading="lazy">
-                    </div>
-                    <div class="menu-card-body">
-                        <div class="menu-card-top">
-                            <h3>Milanesa a la Romana</h3>
-                            <span class="menu-card-price">$5.200</span>
-                        </div>
-                        <p>Milanesa de pollo crocante con huevo frito, pure de papas y ensalada rusa.</p>
-                        <button class="menu-card-btn" data-name="Milanesa a la Romana" data-price="5200">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="menu-card" data-category="milanesas">
-                    <div class="menu-card-img">
-                        <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=500&q=80" alt="Milanesa de Pollo" loading="lazy">
-                    </div>
-                    <div class="menu-card-body">
-                        <div class="menu-card-top">
-                            <h3>Milanesa de Pollo</h3>
-                            <span class="menu-card-price">$4.800</span>
-                        </div>
-                        <p>Milanesa de pechuga de pollo empanizada, con ensalada verde y limon.</p>
-                        <button class="menu-card-btn" data-name="Milanesa de Pollo" data-price="4800">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Merienda -->
-                <div class="menu-card" data-category="merienda">
-                    <div class="menu-card-img">
-                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&q=80" alt="Torta Chocolatada" loading="lazy">
-                    </div>
-                    <div class="menu-card-body">
-                        <div class="menu-card-top">
-                            <h3>Torta Chocolatada</h3>
-                            <span class="menu-card-price">$3.200</span>
-                        </div>
-                        <p>Torta casera de chocolate con ganache, frutas frescas y crema chantilly.</p>
-                        <button class="menu-card-btn" data-name="Torta Chocolatada" data-price="3200">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="menu-card" data-category="merienda">
-                    <div class="menu-card-img">
-                        <img src="https://images.unsplash.com/photo-1558024920-b41e1887dc32?w=500&q=80" alt="Medialunas" loading="lazy">
-                    </div>
-                    <div class="menu-card-body">
-                        <div class="menu-card-top">
-                            <h3>Medialunas (x6)</h3>
-                            <span class="menu-card-price">$2.800</span>
-                        </div>
-                        <p>Medialunas caseras recien horneadas, mantecosas y caramelizadas.</p>
-                        <button class="menu-card-btn" data-name="Medialunas (x6)" data-price="2800">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="menu-card" data-category="merienda">
-                    <div class="menu-card-img">
-                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500&q=80" alt="Churros con Chocolate" loading="lazy">
-                    </div>
-                    <div class="menu-card-body">
-                        <div class="menu-card-top">
-                            <h3>Churros con Chocolate</h3>
-                            <span class="menu-card-price">$2.500</span>
-                        </div>
-                        <p>6 churros recien fritos con chocolate caliente espeso para dippear.</p>
-                        <button class="menu-card-btn" data-name="Churros con Chocolate" data-price="2500">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Pizzas -->
-                <div class="menu-card" data-category="pizzas">
-                    <div class="menu-card-img">
-                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&q=80" alt="Pizza Muzzarella" loading="lazy">
-                    </div>
-                    <div class="menu-card-body">
-                        <div class="menu-card-top">
-                            <h3>Pizza Muzzarella</h3>
-                            <span class="menu-card-price">$4.000</span>
-                        </div>
-                        <p>Masa artesanal, salsa de tomate casera, mozzarella fresca y oregano.</p>
-                        <button class="menu-card-btn" data-name="Pizza Muzzarella" data-price="4000">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="menu-card" data-category="pizzas">
-                    <div class="menu-card-img">
-                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&q=80" alt="Fugazzeta Rellena" loading="lazy">
-                    </div>
-                    <div class="menu-card-body">
-                        <div class="menu-card-top">
-                            <h3>Fugazzeta Rellena</h3>
-                            <span class="menu-card-price">$5.500</span>
-                        </div>
-                        <p>Doble capa de mozzarella, cebolla caramelizada y queso parmesano.</p>
-                        <button class="menu-card-btn" data-name="Fugazzeta Rellena" data-price="5500">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Empanadas -->
-                <div class="menu-card" data-category="empanadas">
-                    <div class="menu-card-img">
-                        <img src="https://images.unsplash.com/photo-1604467707321-70d009801bf4?w=500&q=80" alt="Empanadas" loading="lazy">
-                    </div>
-                    <div class="menu-card-body">
-                        <div class="menu-card-top">
-                            <h3>Empanadas (x12)</h3>
-                            <span class="menu-card-price">$5.400</span>
-                        </div>
-                        <p>Docena de empanadas caseras: carne, pollo, humita o jamon y queso.</p>
-                        <button class="menu-card-btn" data-name="Empanadas (x12)" data-price="5400">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="menu-card" data-category="empanadas">
-                    <div class="menu-card-img">
-                        <img src="https://images.unsplash.com/photo-1626198226928-4a4b78e9d560?w=500&q=80" alt="Empanadas al Disco" loading="lazy">
-                    </div>
-                    <div class="menu-card-body">
-                        <div class="menu-card-top">
-                            <h3>Empanadas (x6)</h3>
-                            <span class="menu-card-price">$3.000</span>
-                        </div>
-                        <p>Media docena de empanadas fritas al disco con cebolla y morron.</p>
-                        <button class="menu-card-btn" data-name="Empanadas (x6)" data-price="3000">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Bebidas -->
-                <div class="menu-card" data-category="bebidas">
-                    <div class="menu-card-img">
-                        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=500&q=80" alt="Limonada Natural" loading="lazy">
-                    </div>
-                    <div class="menu-card-body">
-                        <div class="menu-card-top">
-                            <h3>Limonada Natural</h3>
-                            <span class="menu-card-price">$1.800</span>
-                        </div>
-                        <p>Limonada recien preparada con limones frescos, hierbabuena y hielo.</p>
-                        <button class="menu-card-btn" data-name="Limonada Natural" data-price="1800">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="menu-card" data-category="bebidas">
-                    <div class="menu-card-img">
-                        <img src="https://images.unsplash.com/photo-1497534446932-c925b458314e?w=500&q=80" alt="Milkshake" loading="lazy">
-                    </div>
-                    <div class="menu-card-body">
-                        <div class="menu-card-top">
-                            <h3>Milkshake Premium</h3>
-                            <span class="menu-card-price">$2.800</span>
-                        </div>
-                        <p>Batido de leche con Nutella, Oreo, frutilla o banana. Crema y toppings.</p>
-                        <button class="menu-card-btn" data-name="Milkshake Premium" data-price="2800">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Specials -->
-    <section id="specials" class="section specials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Ofertas</span>
-                <h2>Promociones de la semana</h2>
-            </div>
-            <div class="specials-grid">
-                <div class="special-card">
-                    <span class="special-tag">-30%</span>
-                    <h3>Combo Burger + Papas</h3>
-                    <p>Hamburguesa clasica con papas fritas y bebida incluida.</p>
-                    <div class="special-prices">
-                        <span class="old-price">$8.500</span>
-                        <span class="new-price">$5.950</span>
-                    </div>
-                    <a href="https://wa.me/5493884418917?text=Hola!%20Quiero%20el%20Combo%20Burger%20%2B%20Papas" class="btn btn-dark btn-sm" target="_blank">
-                        Pedir
-                    </a>
-                </div>
-                <div class="special-card">
-                    <span class="special-tag">Martes</span>
-                    <h3>2x1 en Milanesas</h3>
-                    <p>Todos los martes, la segunda milanesa al 50% de descuento.</p>
-                    <div class="special-prices">
-                        <span class="old-price">$11.000</span>
-                        <span class="new-price">$8.250</span>
-                    </div>
-                    <a href="https://wa.me/5493884418917?text=Hola!%20Quiero%20el%202x1%20de%20Milanesas" class="btn btn-dark btn-sm" target="_blank">
-                        Pedir
-                    </a>
-                </div>
-                <div class="special-card">
-                    <span class="special-tag">Happy Hour</span>
-                    <h3>Merienda Completa</h3>
-                    <p>2 medialunas, cafe, zumo y tostadas por un precio especial.</p>
-                    <div class="special-prices">
-                        <span class="old-price">$4.500</span>
-                        <span class="new-price">$2.990</span>
-                    </div>
-                    <a href="https://wa.me/5493884418917?text=Hola!%20Quiero%20la%20Merienda%20Completa" class="btn btn-dark btn-sm" target="_blank">
-                        Pedir
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Contacto</span>
-                <h2>Encontranos o pedinos</h2>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-location-dot"></i>
-                        <div>
-                            <strong>Direccion</strong>
-                            <p>Av. Principal 1234, CABA, Buenos Aires</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <strong>Telefono</strong>
-                            <p>+54 11 0000-0000</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <strong>Horarios</strong>
-                            <p>Lun - Dom: 11:00 - 23:00</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <div>
-                            <strong>WhatsApp</strong>
-                            <p>Pedinos por WhatsApp al toque</p>
-                        </div>
-                    </div>
-                    <div class="contact-socials">
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form-wrapper">
-                    <h3>Envianos tu consulta</h3>
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-row">
-                            <input type="text" id="formName" placeholder="Tu nombre" required>
-                            <input type="tel" id="formPhone" placeholder="Telefono" required>
-                        </div>
-                        <input type="email" id="formEmail" placeholder="Tu email" required>
-                        <textarea id="formMessage" rows="4" placeholder="Tu mensaje" required></textarea>
-                        <button type="submit" class="btn btn-dark btn-full">
-                            Enviar Mensaje
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <span class="footer-logo">La Casa del Sabor</span>
-                    <p>Ingredientes frescos, recetas de la abuela y mucho amor en cada plato.</p>
-                </div>
-                <div class="footer-links">
-                    <div>
-                        <strong>Menu</strong>
-                        <a href="#menu">Hamburguesas</a>
-                        <a href="#menu">Milanesas</a>
-                        <a href="#menu">Merienda</a>
-                        <a href="#menu">Pizzas</a>
-                    </div>
-                    <div>
-                        <strong>Horarios</strong>
-                        <span>Lun - Vie: 11 - 23hs</span>
-                        <span>Sab: 11 - 00hs</span>
-                        <span>Dom: 12 - 22hs</span>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 La Casa del Sabor. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/5493884418917?text=Hola!%20Quisiera%20hacer%20un%20pedido" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Back to Top -->
-    <a href="#hero" class="back-to-top" id="backToTop" aria-label="Volver arriba">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <!-- Cart Sidebar -->
-    <div class="cart-overlay" id="cartOverlay"></div>
-    <div class="cart-sidebar" id="cartSidebar">
-        <div class="cart-header">
-            <h3>Tu Pedido</h3>
-            <button class="cart-close" id="cartClose"><i class="fas fa-xmark"></i></button>
-        </div>
-        <div class="cart-body" id="cartBody">
-            <div class="cart-empty">
-                <p>Tu carrito esta vacio</p>
-                <span>Agrega platos del menu para empezar</span>
-            </div>
-        </div>
-        <div class="cart-footer" id="cartFooter" style="display:none;">
-            <div class="cart-total">
-                <span>Total</span>
-                <span id="cartTotal">$0</span>
-            </div>
-            <a href="#" class="btn btn-whatsapp btn-full" id="cartWhatsapp" target="_blank">
-                <i class="fab fa-whatsapp"></i> Enviar Pedido por WhatsApp
-            </a>
-        </div>
+    <!-- Buscador -->
+    <div class="search-box">
+      <i data-lucide="search"></i>
+      <input type="text" id="searchInput" placeholder="Buscar productos...">
     </div>
 
-    <button class="cart-toggle" id="cartToggle" aria-label="Abrir carrito">
-        <i class="fas fa-shopping-bag"></i>
-        <span class="cart-count" id="cartCount">0</span>
-    </button>
+    <!-- Categorias -->
+    <nav class="categories" id="categories">
+      <button class="cat-item active" data-cat="all">
+        <i data-lucide="utensils-crossed"></i>
+        <span>Todo</span>
+      </button>
+      <button class="cat-item" data-cat="hamburguesas">
+        <i data-lucide="beef"></i>
+        <span>Hamburguesas</span>
+      </button>
+      <button class="cat-item" data-cat="milanesas">
+        <i data-lucide="drumstick"></i>
+        <span>Milanesas</span>
+      </button>
+      <button class="cat-item" data-cat="pizzas">
+        <i data-lucide="pizza"></i>
+        <span>Pizzas</span>
+      </button>
+      <button class="cat-item" data-cat="empanadas">
+        <i data-lucide="cookie"></i>
+        <span>Empanadas</span>
+      </button>
+      <button class="cat-item" data-cat="merienda">
+        <i data-lucide="cake-slice"></i>
+        <span>Merienda</span>
+      </button>
+      <button class="cat-item" data-cat="bebidas">
+        <i data-lucide="glass-water"></i>
+        <span>Bebidas</span>
+      </button>
+    </nav>
 
-    <script src="script.js"></script>
+    <!-- Hamburguesas -->
+    <section class="menu-section" data-section="hamburguesas">
+      <h2>Hamburguesas</h2>
+      <div class="product-list">
+
+        <article class="product-card" data-cat="hamburguesas" data-name="hamburguesa clasica doble cheddar bbq">
+          <div class="product-info">
+            <h4 class="product-title">Hamburguesa Clasica</h4>
+            <p class="product-desc">Medallon de carne 180g, lechuga, tomate, cebolla morada, queso cheddar y salsa especial.</p>
+            <span class="product-price">$4.500</span>
+          </div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&q=80" alt="Hamburguesa Clasica">
+          </div>
+        </article>
+
+        <article class="product-card" data-cat="hamburguesas" data-name="doble cheddar bacon bbq">
+          <div class="product-info">
+            <h4 class="product-title">Doble Cheddar</h4>
+            <p class="product-desc">Dos medallones de 150g cada uno, doble queso cheddar, bacon crocante y BBQ ahumada.</p>
+            <span class="product-price">$5.800</span>
+          </div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=300&q=80" alt="Doble Cheddar">
+          </div>
+        </article>
+
+        <article class="product-card" data-cat="hamburguesas" data-name="burger vegana plant based palta rucula">
+          <div class="product-info">
+            <h4 class="product-title">Burger Vegana</h4>
+            <p class="product-desc">Medallon de plant-based, palta, rucula, tomate cherry y mayonesa de chipotle.</p>
+            <span class="product-price">$5.200</span>
+          </div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=300&q=80" alt="Burger Vegana">
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Milanesas -->
+    <section class="menu-section" data-section="milanesas">
+      <h2>Milanesas</h2>
+      <div class="product-list">
+
+        <article class="product-card" data-cat="milanesas" data-name="milanesa napolitana carne mozzarella">
+          <div class="product-info">
+            <h4 class="product-title">Milanesa Napolitana</h4>
+            <p class="product-desc">Milanesa de carne empanizada, salsa casera, mozzarella derretida y oregano.</p>
+            <span class="product-price">$5.500</span>
+          </div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?w=300&q=80" alt="Milanesa Napolitana">
+          </div>
+        </article>
+
+        <article class="product-card" data-cat="milanesas" data-name="milanesa a la romana pollo huevo pure">
+          <div class="product-info">
+            <h4 class="product-title">Milanesa a la Romana</h4>
+            <p class="product-desc">Milanesa de pollo crocante con huevo frito, pure de papas y ensalada rusa.</p>
+            <span class="product-price">$5.200</span>
+          </div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=300&q=80" alt="Milanesa a la Romana">
+          </div>
+        </article>
+
+        <article class="product-card" data-cat="milanesas" data-name="milanesa de pollo pechuga ensalada">
+          <div class="product-info">
+            <h4 class="product-title">Milanesa de Pollo</h4>
+            <p class="product-desc">Milanesa de pechuga de pollo empanizada, con ensalada verde y limon.</p>
+            <span class="product-price">$4.800</span>
+          </div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=300&q=80" alt="Milanesa de Pollo">
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Pizzas -->
+    <section class="menu-section" data-section="pizzas">
+      <h2>Pizzas</h2>
+      <div class="product-list">
+
+        <article class="product-card" data-cat="pizzas" data-name="pizza muzzarella mozzarella oregano">
+          <div class="product-info">
+            <h4 class="product-title">Pizza Muzzarella</h4>
+            <p class="product-desc">Masa artesanal, salsa de tomate casera, mozzarella fresca y oregano.</p>
+            <span class="product-price">$4.000</span>
+          </div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=300&q=80" alt="Pizza Muzzarella">
+          </div>
+        </article>
+
+        <article class="product-card" data-cat="pizzas" data-name="fugazzeta rellena mozzarella cebolla parmesano">
+          <div class="product-info">
+            <h4 class="product-title">Fugazzeta Rellena</h4>
+            <p class="product-desc">Doble capa de mozzarella, cebolla caramelizada y queso parmesano.</p>
+            <span class="product-price">$5.500</span>
+          </div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300&q=80" alt="Fugazzeta Rellena">
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Empanadas -->
+    <section class="menu-section" data-section="empanadas">
+      <h2>Empanadas</h2>
+      <div class="product-list">
+
+        <article class="product-card" data-cat="empanadas" data-name="empanadas docena carne pollo humita jamon queso">
+          <div class="product-info">
+            <h4 class="product-title">Empanadas (x12)</h4>
+            <p class="product-desc">Docena de empanadas caseras: carne, pollo, humita o jamon y queso.</p>
+            <span class="product-price">$5.400</span>
+          </div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1604467707321-70d009801bf4?w=300&q=80" alt="Empanadas x12">
+          </div>
+        </article>
+
+        <article class="product-card" data-cat="empanadas" data-name="empanadas media docena disco cebolla morron">
+          <div class="product-info">
+            <h4 class="product-title">Empanadas (x6)</h4>
+            <p class="product-desc">Media docena de empanadas fritas al disco con cebolla y morron.</p>
+            <span class="product-price">$3.000</span>
+          </div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1626198226928-4a4b78e9d560?w=300&q=80" alt="Empanadas x6">
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Merienda -->
+    <section class="menu-section" data-section="merienda">
+      <h2>Merienda</h2>
+
+      <h3 class="subsection-title">Dulces</h3>
+      <div class="product-list">
+
+        <article class="product-card" data-cat="merienda" data-name="torta chocolatada chocolate ganache frutas chantilly">
+          <div class="product-info">
+            <h4 class="product-title">Torta Chocolatada</h4>
+            <p class="product-desc">Torta casera de chocolate con ganache, frutas frescas y crema chantilly.</p>
+            <span class="product-price">$3.200</span>
+          </div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=300&q=80" alt="Torta Chocolatada">
+          </div>
+        </article>
+
+        <article class="product-card" data-cat="merienda" data-name="medialunas caseras horneadas mantecosas caramelizadas">
+          <div class="product-info">
+            <h4 class="product-title">Medialunas (x6)</h4>
+            <p class="product-desc">Medialunas caseras recien horneadas, mantecosas y caramelizadas.</p>
+            <span class="product-price">$2.800</span>
+          </div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1558024920-b41e1887dc32?w=300&q=80" alt="Medialunas">
+          </div>
+        </article>
+
+        <article class="product-card" data-cat="merienda" data-name="churros chocolate caliente dippear">
+          <div class="product-info">
+            <h4 class="product-title">Churros con Chocolate</h4>
+            <p class="product-desc">6 churros recien fritos con chocolate caliente espeso para dippear.</p>
+            <span class="product-price">$2.500</span>
+          </div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=300&q=80" alt="Churros con Chocolate">
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Bebidas -->
+    <section class="menu-section" data-section="bebidas">
+      <h2>Bebidas</h2>
+      <div class="product-list">
+
+        <article class="product-card" data-cat="bebidas" data-name="limonada natural frescos hierbabuena hielo">
+          <div class="product-info">
+            <h4 class="product-title">Limonada Natural</h4>
+            <p class="product-desc">Limonada recien preparada con limones frescos, hierbabuena y hielo.</p>
+            <span class="product-price">$1.800</span>
+          </div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=300&q=80" alt="Limonada Natural">
+          </div>
+        </article>
+
+        <article class="product-card" data-cat="bebidas" data-name="milkshake premium nutella oreo frutilla banana crema toppings">
+          <div class="product-info">
+            <h4 class="product-title">Milkshake Premium</h4>
+            <p class="product-desc">Batido de leche con Nutella, Oreo, frutilla o banana. Crema y toppings.</p>
+            <span class="product-price">$2.800</span>
+          </div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1497534446932-c925b458314e?w=300&q=80" alt="Milkshake">
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>La Casa del Sabor &copy; 2025</p>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
